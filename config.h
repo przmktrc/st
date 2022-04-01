@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char* font     = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char* font     = "Source Code Pro:pixelsize=16:antialias=true:autohint=true";
 static int   borderpx = 2;
 
 /*
@@ -16,7 +16,7 @@ static int   borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char* shell     = "/bin/sh";
+static char* shell     = NULL; //"/bin/fish";
 char*        utmp      = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char*        scroll    = NULL;
@@ -200,7 +200,7 @@ static Shortcut shortcuts[] = {
     { ShiftMask, XK_Insert, selpaste, { .i = 0 } },
     { TERMMOD, XK_Num_Lock, numlock, { .i = 0 } },
     { ShiftMask, XK_Page_Up, kscrollup, { .i = -1 } },
-    { ShiftMask, XK_Page_Down, kscrolldown, { .i = -1 } },
+    { ShiftMask, XK_Page_Down, kscrolldown, { .i = -1 } }
 };
 
 /*
